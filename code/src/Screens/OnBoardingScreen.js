@@ -46,8 +46,8 @@ const OnBoardingScreen = () => {
                 />
               </View>
             ),
-            title: "Introduction",
-            subtitle: "Hello World",
+            title: "Welcome Nagendra!",
+            subtitle: "",
           },
           {
             backgroundColor: "#fef3c7",
