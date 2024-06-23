@@ -15,8 +15,8 @@ const OnBoardingScreen = () => {
                 <Text>Hello World</Text>
               </View>
             ),
-            title: "Onboarding",
-            subtitle: "Done with React Native Onboarding Swiper",
+            title: "Introduction",
+            subtitle: "Hello World",
           },
           {
             backgroundColor: "#fff",
