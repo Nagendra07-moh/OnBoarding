@@ -1,7 +1,16 @@
-import { View, Text, SafeAreaView, StyleSheet, Image } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  Image,
+  Dimensions,
+} from "react-native";
 import React from "react";
 import Onboarding from "react-native-onboarding-swiper";
+import LottieView from "lottie-react-native";
 
+const { height, width } = Dimensions.get("window");
 const OnBoardingScreen = () => {
   return (
     <View style={style.Container}>
@@ -12,7 +21,12 @@ const OnBoardingScreen = () => {
             backgroundColor: "#fff",
             image: (
               <View>
-                <Text>Hello World</Text>
+                <LottieView
+                  style={style.lottie}
+                  source={require("../../assets/Animations/work.json")}
+                  autoPlay
+                  loop
+                />
               </View>
             ),
             title: "Introduction",
@@ -22,7 +36,12 @@ const OnBoardingScreen = () => {
             backgroundColor: "#fff",
             image: (
               <View>
-                <Text>Second</Text>
+                <LottieView
+                  style={style.lottie}
+                  source={require("../../assets/Animations/laptop.json")}
+                  autoPlay
+                  loop
+                />
               </View>
             ),
             title: "Onboarding",
@@ -32,7 +51,27 @@ const OnBoardingScreen = () => {
             backgroundColor: "#fff",
             image: (
               <View>
-                <Text>Third</Text>
+                <LottieView
+                  style={style.lottie}
+                  source={require("../../assets/Animations/contactUs.json")}
+                  autoPlay
+                  loop
+                />
+              </View>
+            ),
+            title: "Onboarding",
+            subtitle: "Done with React Native Onboarding Swiper",
+          },
+          {
+            backgroundColor: "#fff",
+            image: (
+              <View>
+                <LottieView
+                  style={style.lottie}
+                  source={require("../../assets/Animations/rating.json")}
+                  autoPlay
+                  loop
+                />
               </View>
             ),
             title: "Onboarding",
@@ -50,5 +89,9 @@ const style = StyleSheet.create({
   Container: {
     flex: 1,
     backgroundColor: "white",
+  },
+  lottie: {
+    width: width * 0.9,
+    height: height * 0.4,
   },
 });
